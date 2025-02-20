@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario Renfe</title>
+
+    <!-- Metadatos de la web -->
+    <meta name="description" content="Formulario de Renfe para la búsqueda y compra de billetes." />
+    <meta name="keywords" content="Renfe, buscar trenes, buscar billetes, viajes, España" />
+    <meta name="author" content="Daniel Cano" />
+
+    <!-- Enlace a los estilos -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Metadatos de Open Graph -->
+    <meta property="og:title" content="Ejercicio - Formulario de Renfe" />
+    <meta property="og:description" content="Encuentra tu viaje con el formulario de Renfe" />
+    <meta property="og:image" content="./images/favicon.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+</head>
+
+<body>
+    <h1>Formulario de Renfe</h1>
+
+    <form action="#" method="GET" id="form-renfe">
+        <!-- Origen y Destino -->
+        <fieldset>
+            <legend>Origen y Destino</legend>
+
+            <label for="origen">Selecciona tu origen:</label>
+            <select name="origen" id="origen" required>
+                <option value="">-- Selecciona --</option>
+                <optgroup label="Castilla - La Mancha">
+                    <option value="ciudad-real">Ciudad Real</option>
+                    <option value="toledo">Toledo</option>
+                    <option value="cuenca">Cuenca</option>
+                    <option value="guadalajara">Guadalajara</option>
+                    <option value="albacete">Albacete</option>
+                </optgroup>
+                <optgroup label="Andalucía">
+                    <option value="sevilla">Sevilla</option>
+                    <option value="cordoba">Córdoba</option>
+                    <option value="granada">Granada</option>
+                    <option value="malaga">Málaga</option>
+                </optgroup>
+                <optgroup label="Cataluña">
+                    <option value="barcelona">Barcelona</option>
+                    <option value="tarragona">Tarragona</option>
+                    <option value="lleida">Lleida</option>
+                    <option value="girona">Girona</option>
+                </optgroup>
+                <optgroup label="Madrid">
+                    <option value="madrid">Madrid - Atocha</option>
+                    <option value="madrid-chamartin">Madrid - Chamartín</option>
+                </optgroup>
+            </select>
+
+            <label for="destino">Selecciona tu destino:</label>
+            <select name="destino" id="destino" required>
+                <option value="">-- Selecciona --</option>
+                <optgroup label="Castilla - La Mancha">
+                    <option value="ciudad-real">Ciudad Real</option>
+                    <option value="toledo">Toledo</option>
+                    <option value="cuenca">Cuenca</option>
+                    <option value="guadalajara">Guadalajara</option>
+                    <option value="albacete">Albacete</option>
+                </optgroup>
+                <optgroup label="Andalucía">
+                    <option value="sevilla">Sevilla</option>
+                    <option value="cordoba">Córdoba</option>
+                    <option value="granada">Granada</option>
+                    <option value="malaga">Málaga</option>
+                </optgroup>
+                <optgroup label="Cataluña">
+                    <option value="barcelona">Barcelona</option>
+                    <option value="tarragona">Tarragona</option>
+                    <option value="lleida">Lleida</option>
+                    <option value="girona">Girona</option>
+                </optgroup>
+                <optgroup label="Madrid">
+                    <option value="madrid">Madrid - Atocha</option>
+                    <option value="madrid-chamartin">Madrid - Chamartín</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <!-- Fechas de viaje -->
+        <fieldset>
+            <legend>Fechas</legend>
+
+            <label for="fecha-ida">Fecha de Ida:</label>
+            <input type="date" name="fecha-ida" id="fecha-ida" required />
+
+            <label for="fecha-vuelta">Fecha de Vuelta:</label>
+            <input type="date" name="fecha-vuelta" id="fecha-vuelta" />
+        </fieldset>
+
+        <!-- Pasajeros -->
+        <fieldset>
+            <legend>Pasajeros</legend>
+
+            <label for="adultos">Número de adultos:</label>
+            <input type="number" id="adultos" name="adultos" min="1" value="1" required />
+        </fieldset>
+
+        <!-- Preferencias de viaje -->
+        <fieldset>
+            <legend>Preferencias de viaje</legend>
+
+            <label for="viaje-sin-enlace">
+                <input type="checkbox" name="viaje-sin-enlace" id="viaje-sin-enlace" />
+                Viaje sin enlace
+            </label>
+        </fieldset>
+
+        <!-- Viaje accesible -->
+        <fieldset>
+            <legend>Viaje accesible</legend>
+
+            <label for="viaje-accesible">
+                <input type="checkbox" name="viaje-accesible" id="viaje-accesible" />
+                Viaje accesible
+            </label>
+            <br />
+
+            <label for="plaza-h-disponible">
+                <input type="checkbox" name="plaza-h-disponible" id="plaza-h-disponible" />
+                <img src="./images/asientoH.png" alt="Icono silla de ruedas"
+                    style="width:20px; height:20px; vertical-align:middle;" />
+                Plaza H disponible
+            </label>
+        </fieldset>
+
+        <!-- Franja horaria -->
+        <fieldset>
+            <legend>Franja horaria</legend>
+
+            <!-- Checkboxes ida y vuelta -->
+            <label for="viaje_ida">
+                <input type="checkbox" name="viaje_ida" id="viaje_ida" />
+                Viaje de ida
+            </label>
+            <label for="hora_ida">Hora de ida:</label>
+            <input type="time" name="hora_ida" id="hora_ida" />
+
+            <br />
+
+            <label for="viaje_vuelta">
+                <input type="checkbox" name="viaje_vuelta" id="viaje_vuelta" />
+                Viaje de vuelta
+            </label>
+            <label for="hora_vuelta">Hora de vuelta:</label>
+            <input type="time" name="hora_vuelta" id="hora_vuelta" />
+
+            <br />
+
+            <!-- Select franja horaria general -->
+            <label for="franja-horaria">Franja horaria:</label>
+            <select name="franja-horaria" id="franja-horaria">
+                <option value="">Cualquiera</option>
+                <option value="manana">Mañana</option>
+                <option value="tarde">Tarde</option>
+                <option value="noche">Noche</option>
+            </select>
+        </fieldset>
+
+
+        <!-- Botón -->
+        <button type="submit" class="boton-buscar">Buscar billete</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+/* 1) Importar una fuente más bonita, por ejemplo "Poppins" de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #83004f; /* Color principal de Renfe */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 700px; /* Un poco más ancho que antes */
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Fieldsets y leyendas */
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: 600;
+    color: #83004f;
+    padding: 0 10px; /* Un poco de separación lateral */
+}
+
+/* Etiquetas y elementos de formulario */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+select,
+input[type="date"],
+input[type="time"],
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* Secciones especiales */
+.fecha-ida-vuelta {
+    display: flex;
+    gap: 10px;
+}
+.fecha-ida-vuelta div {
+    flex: 1;
+}
+
+/* Opciones de viaje y viaje accesible */
+.opciones-viaje,
+.viaje-accesible {
+    margin-bottom: 10px;
+}
+
+/* Botón de envío */
+.boton-buscar {
+    background-color: #83004f;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.boton-buscar:hover {
+    background-color: #a3005f;
+}
