@@ -103,8 +103,20 @@
         <fieldset>
             <legend>Pasajeros</legend>
 
-            <label for="adultos">Número de adultos:</label>
+            <label for="adultos">Adultos:
+                <span><br>(Más de 13 años)</span>
+            </label>
             <input type="number" id="adultos" name="adultos" min="1" value="1" required />
+
+            <label for="ninos">Niños:
+                <span><br>(De 0 a 13 años)</span>
+            </label>
+            <input type="number" id="ninos" name="ninos" min="1" value="1" required />
+
+            <label for="bebes">Bebés
+                <span><br>De 0 a 3 años gratis (sin ocupar plaza)</span>
+            </label>
+            <input type="number" id="bebes" name="bebes" min="1" value="1" required />
         </fieldset>
 
         <!-- Preferencias de viaje -->
